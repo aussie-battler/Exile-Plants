@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------------
+	Author: nflug (ofpectag: ACRYL)
+    File: description.ext
+	Modified: Kuchenplatte
+	<Acryl-Gaming.de>
+    Written by nflug - modified and edited by Kuchenplatte
+    You're not allowed to use this file without permission from the author!
+--------------------------------------------------------------------*/
+
+
+
+
+
+
+#include "Config_Plants.hpp"
+
+class CfgFunctions 
+{
+	class Plants_Core {
+		tag = "plants";
+		
+		class plants {
+			file = "plants";
+			class plantsInit {};
+			class plantsAdd {};
+			class plantsGet {};
+			class plantsUse {};
+		};
+		
+		class extra {
+			file = "extra";
+			class fetchCfgDetails {};
+			class handleItem {};
+			class checkItemWeight {};
+			class accType {};
+		};
+	};
+};
+
+class CfgRemoteExec
+{
+    class Functions
+    {
+        mode = 1;
+        jip = 0;
+
+        class ExileServer_system_network_dispatchIncomingMessage
+        {
+            allowedTargets = 2;
+        };
+		
+		class plant_message 
+		{
+			allowedTargets = 1;
+		};
+		
+		class plant_remove
+		{
+			allowedTargets = 1;
+		};
+		
+		class plants_fnc_plants_create 
+		{
+			allowedTargets = 2;
+		};
+		
+		class plants_fnc_plants_remove 
+		{
+			allowedTargets = 2;
+		};
+    };
+
+    class Commands
+    {
+		mode = 0;
+		jip = 0;
+		
+		class addAction {
+			allowedTargets = 1;
+		};
+    };
+};
